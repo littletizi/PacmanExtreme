@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/game.css" />
+    <script src="../JavaScript/game.js"></script>
 
     
     <title>Pacman Extreme</title>
 </head>
-<body>
+<body onkeydown="getKeyAndMove(event)">
 
     <!-- <img src="../Resources/pictures/maze.png" alt="lol" id="pic" width="80%" height="80%"> -->
-    <img src="../Resources/pictures/front_person.png" alt="lol">
+    <img src="../Resources/pictures/front_person.png" id="personfront" alt="lol">
     <!-- <div>
         <canvas id="gamecanvas" width="900" height="900" onclick="startGame.html">
         This text is displayed if your browser does not support HTML5 Canvas.
