@@ -24,6 +24,7 @@ var objImage = null;
     }
     function moveLeft() {
         objImage.style.left = parseInt(objImage.style.left) - 10 + "px";
+        
     }
     function moveUp() {
         objImage.style.top = parseInt(objImage.style.top) - 10 + "px";
