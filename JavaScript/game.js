@@ -1,6 +1,6 @@
 var objImage = null;
     function init() {
-        objImage = document.getElementById("personfront");
+        objImage = document.getElementById("person");
         objImage.style.position = "relative";
         objImage.style.left = "0px";
         objImage.style.top = "0px";
