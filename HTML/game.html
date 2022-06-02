@@ -2,46 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../CSS/game.css" />
-    <script src="../JavaScript/game.js"></script>
-
-    <title>Pacman Extreme</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>JS Pacman</title>
   </head>
-  <body onkeydown="getKeyAndMove(event)">
-    <div class="centeredDIV">
-      <div class="verticalcenteredDIV">
-        <img
-          src="../Resources/pictures/maze.png"
-          alt="lol"
-          id="pic"
-          width="500px"
-          height="500px"
-        />
-        <img
-      src="../Resources/pictures/front_person.png"
-      id="person"
-      alt="lol"
-      width="40px"
-      height="40px"
-    />
-      </div>
+  <body>
+    <div id="wrapper">
+      <div id="game"></div>
+      <div id="score"></div>
+      <button id="start-button">Start Game</button>
     </div>
-    
-    <!-- <div>
-        <canvas id="gamecanvas" width="900" height="900" onclick="startGame.html">
-        This text is displayed if your browser does not support HTML5 Canvas.
-        </canvas>
-        </div> -->
+    <script src="../JavaScript/index.js"></script>
   </body>
 </html>
-
-<script>
-  //     window.onload = function () {
-  //     var c = document.getElementById("gamecanvas");
-  //     var ctx = c.getContext("2d");
-  //     var img = document.getElementById("pic");
-  //     ctx.drawImage(img, 0, 0);
-  // };
-</script>
