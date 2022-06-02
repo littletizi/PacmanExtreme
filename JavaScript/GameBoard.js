@@ -22,7 +22,7 @@ class GameBoard {
     // First set correct amount of columns based on Grid Size and Cell Size
     this.DOMGrid.style.cssText = `grid-template-columns: repeat(${GRID_SIZE}, ${CELL_SIZE}px);`;
 
-    level.forEach((square, i) => {
+    level.forEach((square) => {
       const div = document.createElement('div');
       div.classList.add('square', CLASS_LIST[square]);
       div.style.cssText = `width: ${CELL_SIZE}px; height: ${CELL_SIZE}px;`;
@@ -54,7 +54,7 @@ class GameBoard {
   /*moveCharacter(character) {
     if (character.shouldMove()) {
       const { nextMovePos, direction } = character.getNextMove(
-        this.objectExist.bind(this)
+        this.objectExist
       );
       const { classesToRemove, classesToAdd } = character.makeMove();
 

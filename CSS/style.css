@@ -135,20 +135,9 @@ body {
   background: orange;
 }
 
-.pacman {
-  background: yellow;
-  border: none;
-  border-radius: 50%;
-  clip-path: polygon(
-    0 0,
-    20px 0,
-    20px -5px,
-    8px 10px,
-    20px 25px,
-    20px 20px,
-    0 20px
-  );
-  animation: chew 0.2s linear forwards infinite;
+.hero {
+  background-image: url('../Resources/pictures/front_person.png');
+  background-size: 20px;
 }
 
 @keyframes chew {
