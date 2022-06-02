@@ -42,20 +42,19 @@ class Hero {
         this.pos = nextMovePos;
     }
 
-    handleKeyInput(e, objectExists){
-        console.log(e);
+    handleKeyInput = (e, objectExist) => {
         let dir;
-
-        if(e.keyCode >= 37 && e.keyCode <= 40){
-            dir = DIRECTIONS[e.key];
-        } else{
-            return;
+    
+        if (e.keyCode >= 37 && e.keyCode <= 40) {
+          dir = DIRECTIONS[e.key];
+        } else {
+          return;
         }
-
+    
         const nextMovePos = this.pos + dir.movement;
-        if(objectExists(nextMovePos, OBJECT_TYPE.WALL)) return;
+        if (objectExist(nextMovePos, OBJECT_TYPE.WALL)) return;
         this.dir = dir;
-    }
+      };
 }
 
 export default Hero;

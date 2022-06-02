@@ -42,35 +42,26 @@ class GameBoard {
     this.grid[pos].classList.remove(...classes);
   }
   // Can have an arrow function here cause of this binding
-  objectExist(pos, object) {
+  objectExist = (pos, object) => {
     return this.grid[pos].classList.contains(object);
   };
 
-  //brauchen wir denke ich nicht lol
-  rotateDiv(pos, deg) {
-    this.grid[pos].style.transform = `rotate(${deg}deg)`;
-  }
+  
 
-  /*moveCharacter(character) {
+  moveCharacter(character) {
     if (character.shouldMove()) {
       const { nextMovePos, direction } = character.getNextMove(
-        this.objectExist
+        //this.objectExist.bind(this)
       );
       const { classesToRemove, classesToAdd } = character.makeMove();
 
-      if (character.rotation && nextMovePos !== character.pos) {
-        // Rotate
-        this.rotateDiv(nextMovePos, character.dir.rotation);
-        // Rotate the previous div back
-        this.rotateDiv(character.pos, 0);
-      }
 
       this.removeObject(character.pos, classesToRemove);
       this.addObject(nextMovePos, classesToAdd);
 
       character.setNewPos(nextMovePos, direction);
     }
-  }*/
+  }
 
   static createGameBoard(DOMGrid, level) {
     const board = new this(DOMGrid);

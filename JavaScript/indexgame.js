@@ -35,11 +35,11 @@ function startGame(){
     const hero = new Hero(209);
     gameBoard.addObject(209, [OBJECT_TYPE.HERO]);
 
-    /*document.addEventListener('keydown', (e) =>
+    document.addEventListener('keydown', (e) =>
         hero.handleKeyInput(e, gameBoard.objectExist)
     );
 
-    timer = setInterval(() => gameLoop(hero), GLOBAL_SPEED)*/
+    timer = setInterval(() => gameLoop(hero), GLOBAL_SPEED)
 }
 
 startButton.addEventListener('click', startGame, GLOBAL_SPEED);

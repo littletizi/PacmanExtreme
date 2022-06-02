@@ -6,14 +6,33 @@ body {
   /*background: url('background.jpg') no-repeat center center fixed;*/
   background-size: cover;
 }
-
 #wrapper {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+.centeredDIV {
+  display: table;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0; /* Aligns Vertically - Remove for Horizontal Only */
+  left: 0;
+  right: 0; /* Aligns Horizontally - Remove for Vertical Only  */
+  
+  width: 500px;
+  height: 500px;
+  overflow: auto;
+  text-align: center;
+}
+
+.verticalcenteredDIV {
+  display: table-cell;
+
+  vertical-align: middle;
+}
+
 
 #game {
   position: relative;
