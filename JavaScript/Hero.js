@@ -9,7 +9,7 @@ class Hero {
     }
 
     shouldMove(){
-        if(!this.dir) return false;
+        if(!this.dir) return;
         if(this.timer === this.speed){
             this.timer = 0;
             return true;

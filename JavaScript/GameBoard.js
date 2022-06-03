@@ -39,6 +39,7 @@ class GameBoard {
   }
 
   objectExist = (pos, object) => {
+    console.log(this.grid[pos]);
     return this.grid[pos].classList.contains(object);
   };
 
@@ -51,6 +52,12 @@ class GameBoard {
       );
       const { classesToRemove, classesToAdd } = character.makeMove();
 
+      /*if (character.rotation && nextMovePos !== character.pos) {
+        // Rotate
+        this.rotateDiv(nextMovePos, character.dir.rotation);
+        // Rotate the previous div back
+        this.rotateDiv(character.pos, 0);
+      }*/
 
       this.removeObject(character.pos, classesToRemove);
       this.addObject(nextMovePos, classesToAdd);

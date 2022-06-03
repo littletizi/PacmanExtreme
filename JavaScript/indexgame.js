@@ -31,8 +31,8 @@ function startGame(){
 
     gameBoard.createGrid(LEVEL);
 
-    const hero = new Hero(209);
-    gameBoard.addObject(209, [OBJECT_TYPE.HERO]);
+    const hero = new Hero(2, 151);
+    gameBoard.addObject(151, [OBJECT_TYPE.HERO]);
 
     document.addEventListener('keydown', (e) =>
         hero.handleKeyInput(e, gameBoard.objectExist)
