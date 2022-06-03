@@ -52,7 +52,7 @@ class Hero {
         }
     
         const nextMovePos = this.pos + dir.movement;
-        if (objectExist(nextMovePos, OBJECT_TYPE.WALL)) return;
+        if (objectExist(nextMovePos, OBJECT_TYPE.WALL)) return;//OH NOOOOO
         this.dir = dir;
       };
 }

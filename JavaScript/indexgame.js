@@ -4,7 +4,6 @@ import GameBoard from './GameBoard.js';
 import Hero from './Hero.js';
 
 const gameGrid = document.querySelector('#game');
-const scoreTable = document.querySelector('#score');
 const startButton = document.querySelector('#start-button');
 
 
