@@ -15,28 +15,53 @@ const gameBoard = GameBoard.createGameBoard(gameGrid, LEVEL);
 
 let gameWin = false;
 let timer = null;
+let score = 0;
 
 function gameOver(hero, grid){
+    document.removeEventListener('keydown', (e) =>
+    pacman.handleKeyInput(e, gameBoard.objectExist.bind(gameBoard))
+  );
 
+  gameBoard.showGameStatus(gameWin);
+
+  clearInterval(timer);
+  startButton.classList.remove('hide');
 }
 
 function checkCollision(hero, monsters){
+
+  const collidedMonster = monsters.find((monster) => hero.pos === monster.pos);
+
+  if (collidedMonster) {
+      gameBoard.removeObject(collidedMonster.pos, [
+        OBJECT_TYPE.MONSTER,
+        collidedMonster.name
+      ]);
+      score += 1;
+      if(score === 1) {
+        gameOver(hero, gameGrid);
+      }
+  }
+
 
 }
 
 function gameLoop(hero, monsters){
     gameBoard.moveCharacter(hero);
+    checkCollision(hero, monsters);
     monsters.forEach(monster => gameBoard.moveCharacter(monster));
+    checkCollision(hero, monsters);
 }
 
 function startGame(){
     gameWin = false;
     startButton.classList.add('hide');
+    score = 0;
 
     gameBoard.createGrid(LEVEL);
 
-    const hero = new Hero(2, 33);
-    gameBoard.addObject(33, [OBJECT_TYPE.HERO]);
+    const hero = new Hero(2, 189);
+    gameBoard.addObject(189, [OBJECT_TYPE.HERO]);
 
     document.addEventListener('keydown', (e) =>
         hero.handleKeyInput(e, gameBoard.objectExist)
