@@ -44,12 +44,19 @@ class Hero {
 
     handleKeyInput = (e, objectExist) => {
         let dir;
-    
+       
         if (e.keyCode >= 37 && e.keyCode <= 40) {
           dir = DIRECTIONS[e.key];
         } else {
           return;
         }
+
+        /*if (e.keyCode === 65 || e.keyCode === 87 || e.keyCode === 68 || e.keyCode === 83) {
+            dir = DIRECTIONS[e.key];
+
+        }else {
+            return;
+          }*/
     
         const nextMovePos = this.pos + dir.movement;
         if (objectExist(nextMovePos, OBJECT_TYPE.WALL)) return;//OH NOOOOO

@@ -2,22 +2,22 @@ export const GRID_SIZE = 20;
 export const CELL_SIZE = 20;
 export const DIRECTIONS = {
   ArrowLeft: {
-    code: 37,
+    code: 65,
     movement: -1,
     rotation: 180
   },
   ArrowUp: {
-    code: 38,
+    code: 87,
     movement: -GRID_SIZE,
     rotation: 270
   },
   ArrowRight: {
-    code: 39,
+    code: 68,
     movement: 1,
     rotation: 0
   },
   ArrowDown: {
-    code: 40,
+    code: 83,
     movement: GRID_SIZE,
     rotation: 90
   }
@@ -26,10 +26,7 @@ export const DIRECTIONS = {
 export const OBJECT_TYPE = {
   BLANK: 'blank',
   WALL: 'wall',
-  MOSTER1: 'monster1',
-  MOSTER2: 'monster2',
-  MOSTER3: 'monster3',
-  MOSTER4: 'monster4',
+  MONSTER: 'monster',
   HERO: 'hero',
   GHOSTLAIR: 'lair'
 };
@@ -38,10 +35,7 @@ export const OBJECT_TYPE = {
 export const CLASS_LIST = [
   OBJECT_TYPE.BLANK,
   OBJECT_TYPE.WALL,
-  OBJECT_TYPE.MOSTER1,
-  OBJECT_TYPE.MOSTER2,
-  OBJECT_TYPE.MOSTER3,
-  OBJECT_TYPE.MOSTER4,
+  OBJECT_TYPE.MONSTER,
   OBJECT_TYPE.HERO,
   OBJECT_TYPE.GHOSTLAIR
 ];
@@ -52,17 +46,17 @@ export const LEVEL = [
   1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1,
   1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1,
   1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
-  1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1,
+  1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1,
   1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
   1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1,
   1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1,
   1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1,
-  1, 0, 1, 0, 0, 0, 1, 0, 1, 7, 7, 1, 0, 0, 0, 1, 0, 1, 0, 1,
-  1, 0, 1, 0, 1, 0, 1, 1, 1, 7, 7, 1, 1, 1, 0, 1, 0, 1, 0, 1,
+  1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1,
+  1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1,
   1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1,
   1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1,
-  1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1,
-  1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1,
+  1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+  1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1,
   1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1,
   1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1,
   1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
