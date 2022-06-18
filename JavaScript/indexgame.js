@@ -38,7 +38,8 @@ function checkCollision(hero, monsters){
         collidedMonster.name
       ]);
       score += 1;
-      if(score === 1) {
+      collidedMonster.pos = collidedMonster.startPos;
+      if(score === 4) {
         gameOver(hero, gameGrid);
       }
   }
